@@ -1,0 +1,524 @@
+body,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,p,pre{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	background: #2f3045;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+}
+
+/* 头部 */
+/*.header{
+	
+	background: red;
+}
+.header .nav{
+	height: 
+}*/
+/* 头部开始 */
+.header{
+	width: 100%;
+	position: fixed;
+	font-size: 14px;
+	line-height: 44px;
+	z-index: 9999;
+	/*height: 470px;*/
+}
+
+/* 大屏 */
+.header .max-nav{
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: justify;
+	box-sizing: border-box;
+	padding: 0 22px;
+}
+.header .max-nav li{
+	display: inline-block;
+}
+.header .max-nav:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	line-height: 0;
+}
+.header .max-nav li a{
+	display: block;
+	height: 100%;
+	color: #fff;
+	opacity: 0.8;
+}
+.header .max-nav li a:hover{
+	opacity: 0.6;
+}
+.header .max-nav li a i{
+	font-size: 18px!important;
+}
+
+
+/* 小屏 */
+.header .min-nav{
+	max-width: 768px;
+}
+.header .min-nav .nav{
+	height: 48px;
+	text-align: justify;
+}
+.header .min-nav .nav>div{
+	display: inline-block;
+	color: #fff;
+	opacity: 0.8;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.header .min-nav .nav>div:hover{
+	opacity: 0.6;
+}
+.header .min-nav .nav:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	line-height: 0;
+}
+.header .min-nav .nav .menu{
+	width: 48px;
+	height: 48px;
+	box-sizing: border-box;
+	padding: 10px 15px;
+}
+.header .min-nav .nav .menu span{
+	display: block;
+	width: 100%;
+	height: 0;
+	border-top: 1px solid #fff;
+	margin-top: 8px;
+	transition: all 0.5s;
+}
+.header .min-nav .nav-list{
+	width: 100%;
+	background: rgba(47,48,69,1);
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-right: 30px;
+	overflow: hidden;
+	transition: height 0.6s;
+	height: 0;
+}
+.header .min-nav .nav-list li{
+	margin: 0 44px;
+	border-bottom: 1px solid #333;
+}
+.header .min-nav .nav-list li:nth-child(1){
+	padding-top: 20px;
+}
+.header .min-nav .nav-list li a{
+	display: block;
+	width: 100%;
+	color: #fff;
+	opacity: 0.8;
+}
+.header .min-nav .nav-list li a:hover{
+	opacity: 0.6;
+}
+.header .min-nav .nav-list li i{
+	color: #fff;
+	font-size: 18px;
+}
+.header .min-nav .nav-list li input{
+	border: 0;
+	background: #000;
+	color: #fff;
+	margin-left: 10px;
+	width: 80%;
+	height: 100%;
+	font-size: 16px;
+}
+/* 头部结束 */
+
+/* 第一屏开始 */
+.fullpage .section:nth-child(1).container-fluid{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.fullpage .section:nth-child(1) .photo{
+	width:  100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	text-align: center;
+	background-image: url("../images/1.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	overflow: hidden;
+}
+.fullpage .section:nth-child(1) .photo .shadow{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+.fullpage .section:nth-child(1) .photo .word{
+	font-family: "微软雅黑";
+	color: #fff;
+	opacity: 0.8;
+	position: absolute;
+	/*left: 50%;*/
+	top: 50%;
+	transform: translate(-50%,-50%);
+	animation: wordmove 1s both;
+}
+
+
+@keyframes wordmove {
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 50%;
+	}
+}
+/* 第一屏结束 */
+
+
+
+
+
+
+/* 公共样式开始 */
+.fullpage .section:nth-child(2) .name,.fullpage .section:nth-child(3) .name,.fullpage .section:nth-child(4) .name{
+	width: 100%;
+	height: 150px;
+	background-color: #2a2e2d;
+	position: absolute;
+	left: 0;
+	top: 44px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+}
+.fullpage .section:nth-child(2) .name .myname p,.fullpage .section:nth-child(3) .name .myname p,.fullpage .section:nth-child(4) .name .myname p{
+	line-height: 50px;
+}
+.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.fullpage .section:nth-child(2) .aboutme,.fullpage .section:nth-child(3) .project,.fullpage .section:nth-child(4) .contact{
+	width: 100%;
+	position: absolute;
+	top: 194px;
+	height: 400px;
+}
+
+
+
+/* 公共样式结束 */
+
+
+
+/* 第二屏开始 */
+.fullpage .section:nth-child(2) .aboutme{
+	background-color: #e1e1e1;
+}
+.fullpage .section:nth-child(2) .aboutme .myphoto{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #999999;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 99;
+}
+.fullpage .section:nth-child(2) .aboutme .left{}
+.fullpage .section:nth-child(2) .aboutme .mline{
+	width: 2px;
+	height: 75%;
+	background-color: #d0c08f;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.fullpage .section:nth-child(2) .aboutme .right{}
+.fullpage .section:nth-child(2) .aboutme .next{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,0);
+	z-index: 99;
+}
+.fullpage .section:nth-child(2) .aboutme .next>div{
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	z-index: 99;
+}
+.fullpage .section:nth-child(2) .aboutme .next .word{
+	width: 50px;
+	height: 50px;
+	top: 0;
+	background-color: #b59119;
+	text-align: center;
+	line-height: 50px;
+	color: #726e6d;
+}
+.fullpage .section:nth-child(2) .aboutme .next .arrow{
+	width: 25px;
+	height: 50px;
+	bottom: 0;
+}
+.fullpage .section:nth-child(2) .aboutme .next .arrow img{
+	width: 100%;
+}
+.active .aboutme .next .arrow{
+	animation: next 0.5s linear infinite alternate both;
+}
+
+
+@keyframes next{
+	0%{
+		transform: translate(-50%,0);
+		opacity: 0.2;
+	}
+	100%{
+		transform: translate(-50%,25%);
+		opacity: 1;
+	}
+}
+
+
+/* 第二屏结束 */
+
+
+
+/* 第三屏开始 */
+.fullpage .section:nth-child(3) .project{
+	background-color: #363636;
+}
+.fullpage .section:nth-child(3){}
+.img-box{
+	width: 900px;
+	height: 400px;
+	/*border: 5px solid #ff0;*/
+	margin: 0 auto;
+}
+.img-box a{
+	float: left;
+	width: 33.333%;
+	height: 50%;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	/*border: 2px solid #e5004f;*/
+}
+.img-box a img{
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transition: all 1s;
+	transform: translate(-50%,0) scale(1,1) rotate(0deg);
+	transform-origin: 30% center;
+}
+.img-box a:hover img{
+	transform: translate(-50%,0) scale(1.5,1.5) rotate(360deg);
+	margin-left: -50px;
+}
+/* 第三屏结束 */
+
+
+
+/* 第四屏开始 */
+.fullpage .section:nth-child(4) .contact{
+	background-image: url("../images/2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.fullpage .section:nth-child(4) .contact .shadow{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+.fullpage .section:nth-child(4) .contact .main{
+	width: 30%;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: #ffffff;
+}
+.fullpage .section:nth-child(4) .contact .main>div{
+	opacity: 0.8;
+}
+.fullpage .section:nth-child(4){}
+/* 第四屏结束 */
+
+
+
+
+
+/* 手机 */
+@media screen and (max-width: 767px) {
+	/* 头部开始 */
+	.header{
+		height: 48px;
+		background: rgba(47,48,69,1);
+	}
+	.header .max-nav{
+		display: none;
+	}
+	.header .min-nav{
+		display: block;
+	}
+	/* 头部结束 */
+
+	/* 第一屏开始 */
+	.fullpage .section:nth-child(1) .photo .word{
+		font-size: 34px;
+	}
+	/* 第一屏结束 */
+
+	/* 公共样式开始 */
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+		font-size: 14px;
+	}
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+		left: 10%;
+	}
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+		right: 10%;
+	}
+	/* 公共样式结束 */
+
+	/* 第二屏开始 */
+
+	/* 第二屏结束 */
+}
+
+
+/* 平板 */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	/* 头部开始 */
+	.header{
+		height: 44px;
+		background: rgba(47,48,69,0.8);
+	}
+	.header .max-nav{
+		display: block;
+	}
+	.header .min-nav{
+		display: none;
+	}
+	/* 头部结束 */
+
+	/* 第一屏开始 */
+	.fullpage .section:nth-child(1) .photo .word{
+		font-size: 44px;
+	}
+	/* 第一屏结束 */
+
+	/* 公共样式开始 */
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+		font-size: 16px;
+	}
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+		left: 20%;
+	}
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+		right: 20%;
+	}
+	/* 公共样式结束 */
+
+	/* 第二屏开始 */
+
+	/* 第二屏结束 */
+}
+
+
+/* pc */
+@media screen and (min-width: 1024px) {
+	/* 头部开始 */
+	.header{
+		height: 44px;
+		background: rgba(47,48,69,0.8);
+	}
+	.header .max-nav{
+		display: block;
+	}
+	.header .min-nav{
+		display: none;
+	}
+	/* 头部结束 */
+
+	/* 第一屏开始 */
+	.fullpage .section:nth-child(1) .photo .word{
+		font-size: 54px;
+	}
+	/* 第一屏结束 */
+
+	/* 公共样式开始 */
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+		font-size: 16px;
+	}
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+		left: 20%;
+	}
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+		right: 20%;
+	}
+	/* 公共样式结束 */
+
+	/* 第二屏开始 */
+
+	/* 第二屏结束 */
+}
+
+
+
+/* 小屏头部动画 */
+.header .min-nav .nav .menu#active span:nth-child(1){
+	transform: translateY(4px) rotate(45deg);
+}
+.header .min-nav .nav .menu#active span:nth-child(2){
+	transform: translateY(-4px) rotate(135deg);
+}
+
+
+
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{
+	background: rgba(255,255,255,0.6)!important;
+}
+
+
