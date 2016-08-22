@@ -117,5 +117,50 @@ $(function(){
 		}
 		now=next=$index;
 	}
-	console.log($ban)
+	console.log($ban);
+
+
+
+
+	var o=can.getContext("2d");
+	percent(95,"HTML",o);
+	percent(95,"DIV+CSS",can1.getContext("2d"));
+	percent(90,"JavaScript",can2.getContext("2d"));
+	percent(85,"JQuery",can3.getContext("2d"));
+	percent(85,"Bootstrap",can4.getContext("2d"));
+	percent(90,"AngularJS",can5.getContext("2d"));
+	function percent(p,html,o){
+		var i=0;
+		var ang=0;
+		var time=1000/p;
+		o.translate(400,400);
+		var t=setInterval(function(){
+			
+			o.save();
+			o.clearRect(-400,-400,800,800)
+			o.lineWidth=60;
+			o.strokeStyle="#d2a408";
+			o.fillStyle="#666"
+			o.font="100px arial";
+			o.textAlign="center";
+			o.textBaseline="middle";
+
+
+
+			i++;
+			ang=i*360/100;
+			if(i>=p){
+				clearInterval(t);
+			}
+			o.save();
+			o.rotate(-Math.PI/2);
+			o.beginPath();
+			o.arc(0,0,200,0,ang*Math.PI/180);
+			o.stroke();
+			o.closePath();
+			o.restore();
+			o.fillText(html,0,0)
+			o.restore();
+		},time)
+	}
 })

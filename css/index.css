@@ -142,7 +142,7 @@ body{
 	margin-left: 10px;
 	width: 80%;
 	height: 100%;
-	font-size: 16px;
+	font-size: 20px;
 }
 /* 头部结束 */
 
@@ -196,7 +196,7 @@ body{
 
 
 /* 公共样式开始 */
-.fullpage .section:nth-child(2) .name,.fullpage .section:nth-child(3) .name,.fullpage .section:nth-child(4) .name{
+.fullpage .section:nth-child(2) .name,.fullpage .section:nth-child(4) .name,.fullpage .section:nth-child(5) .name{
 	width: 100%;
 	height: 150px;
 	background-color: #2a2e2d;
@@ -206,25 +206,25 @@ body{
 	text-align: center;
 	box-sizing: border-box;
 }
-.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(4) .name .about,.fullpage .section:nth-child(5) .name .about{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
-.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(4) .name .myname,.fullpage .section:nth-child(5) .name .myname{
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
 }
-.fullpage .section:nth-child(2) .name .myname p,.fullpage .section:nth-child(3) .name .myname p,.fullpage .section:nth-child(4) .name .myname p{
+.fullpage .section:nth-child(2) .name .myname p,.fullpage .section:nth-child(4) .name .myname p,.fullpage .section:nth-child(5) .name .myname p{
 	line-height: 50px;
 }
-.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(4) .name .line,.fullpage .section:nth-child(5) .name .line{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
-.fullpage .section:nth-child(2) .aboutme,.fullpage .section:nth-child(3) .project,.fullpage .section:nth-child(4) .contact{
+.fullpage .section:nth-child(2) .aboutme,.fullpage .section:nth-child(4) .project,.fullpage .section:nth-child(5) .contact{
 	width: 100%;
 	position: absolute;
 	top: 194px;
@@ -251,8 +251,14 @@ body{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	z-index: 99;
+	overflow: hidden;
 }
-.fullpage .section:nth-child(2) .aboutme .left{}
+.fullpage .section:nth-child(2) .aboutme .left{
+	width: 50%;
+	height: 100%;
+	float: left;
+	position: relative;
+}
 .fullpage .section:nth-child(2) .aboutme .mline{
 	width: 2px;
 	height: 75%;
@@ -262,7 +268,58 @@ body{
 	left: 50%;
 	transform: translateX(-50%);
 }
-.fullpage .section:nth-child(2) .aboutme .right{}
+.fullpage .section:nth-child(2) .aboutme .right{
+	width: 50%;
+	height: 100%;
+	float: right;
+	position: relative;
+}
+.fullpage .section:nth-child(2) .aboutme .diandian{
+	width: 10px;
+	height: 10px;
+	background: #d0c08f;
+	border-radius: 50%;
+}
+.fullpage .section:nth-child(2) .aboutme .left .diandian{
+	margin-left: 24px;
+	transform: translate(50%,100%);
+}
+.fullpage .section:nth-child(2) .aboutme .right .diandian{
+	margin-right: 24px;
+	transform: translate(-50%,100%);
+}
+.fullpage .section:nth-child(2) .aboutme .left>div{
+	position: absolute;
+	right: 0;
+	font-size: 16px;
+}
+.fullpage .section:nth-child(2) .aboutme .right>div{
+	position: absolute;
+	left: 0;
+	font-size: 16px;
+}
+.fullpage .section:nth-child(2) .aboutme .left>div>div{
+	float: left;
+	color: #666;
+	line-height: 30px;
+}
+.fullpage .section:nth-child(2) .aboutme .right>div>div{
+	float: right;
+	color: #666;
+	line-height: 30px;
+}
+.fullpage .section:nth-child(2) .aboutme .left .cs{
+	margin-top: 20%;
+}
+.fullpage .section:nth-child(2) .aboutme .left .ts{
+	margin-top: 30%;
+}
+.fullpage .section:nth-child(2) .aboutme .right .sr{
+	margin-top: 10%;
+}
+.fullpage .section:nth-child(2) .aboutme .right .sh{
+	margin-top: 20%;
+}
 .fullpage .section:nth-child(2) .aboutme .next{
 	height: 100px;
 	width: 100px;
@@ -318,13 +375,13 @@ body{
 
 
 /* 第三屏开始 */
-.fullpage .section:nth-child(3) .project{
+.fullpage .section:nth-child(4) .project{
 	background-color: #363636;
 }
-.fullpage .section:nth-child(3){}
+.fullpage .section:nth-child(4){}
 .img-box{
-	width: 900px;
-	height: 400px;
+	width: 80%;
+	height: 90%;
 	/*border: 5px solid #ff0;*/
 	margin: 0 auto;
 }
@@ -354,17 +411,17 @@ body{
 
 
 /* 第四屏开始 */
-.fullpage .section:nth-child(4) .contact{
+.fullpage .section:nth-child(5) .contact{
 	background-image: url("../images/2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.fullpage .section:nth-child(4) .contact .shadow{
+.fullpage .section:nth-child(5) .contact .shadow{
 	background-color: rgba(0,0,0,0.5);
 	width: 100%;
 	height: 100%;
 }
-.fullpage .section:nth-child(4) .contact .main{
+.fullpage .section:nth-child(5) .contact .main{
 	width: 30%;
 	height: 80px;
 	position: absolute;
@@ -374,17 +431,39 @@ body{
 	top: 0;
 	margin: auto;
 	text-align: center;
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 30px;
+	line-height: 60px;
 	color: #ffffff;
 }
-.fullpage .section:nth-child(4) .contact .main>div{
+.fullpage .section:nth-child(5) .contact .main>div{
 	opacity: 0.8;
 }
-.fullpage .section:nth-child(4){}
+.fullpage .section:nth-child(5){}
 /* 第四屏结束 */
 
 
+
+/* 新增技能 */
+.fullpage .section:nth-child(3) ul{
+	height: 80%;
+	margin-top: 44px;
+	overflow: hidden;
+	background: #2a2e2d;
+}
+.fullpage .section:nth-child(3) ul li{
+	box-sizing: border-box;
+	height: 50%;
+	position: relative;
+}
+.fullpage .section:nth-child(3) ul li canvas{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
 
 
 
@@ -410,20 +489,36 @@ body{
 	/* 第一屏结束 */
 
 	/* 公共样式开始 */
-	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(4) .name .myname,.fullpage .section:nth-child(5) .name .myname{
 		font-size: 14px;
 	}
-	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(4) .name .about,.fullpage .section:nth-child(5) .name .about{
 		left: 10%;
 	}
-	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(4) .name .line,.fullpage .section:nth-child(5) .name .line{
 		right: 10%;
 	}
 	/* 公共样式结束 */
 
 	/* 第二屏开始 */
-
+	.fullpage .section:nth-child(2) .aboutme .left .cs{
+		margin-top: 60%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .left .ts{
+		margin-top: 90%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .right .sr{
+		margin-top: 30%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .right .sh{
+		margin-top: 60%;
+	}
 	/* 第二屏结束 */
+	/* 第三屏开始 */
+	.fullpage .section:nth-child(3) ul li{
+		height: 30%;
+	}
+	/* 第三屏结束 */
 }
 
 
@@ -449,20 +544,36 @@ body{
 	/* 第一屏结束 */
 
 	/* 公共样式开始 */
-	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
-		font-size: 16px;
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(4) .name .myname,.fullpage .section:nth-child(5) .name .myname{
+		font-size: 20px;
 	}
-	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(4) .name .about,.fullpage .section:nth-child(5) .name .about{
 		left: 20%;
 	}
-	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(4) .name .line,.fullpage .section:nth-child(5) .name .line{
 		right: 20%;
 	}
 	/* 公共样式结束 */
 
 	/* 第二屏开始 */
-
+	.fullpage .section:nth-child(2) .aboutme .left .cs{
+		margin-top: 40%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .left .ts{
+		margin-top: 60%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .right .sr{
+		margin-top: 20%;
+	}
+	.fullpage .section:nth-child(2) .aboutme .right .sh{
+		margin-top: 40%;
+	}
 	/* 第二屏结束 */
+	/* 第三屏开始 */
+	.fullpage .section:nth-child(3) ul li{
+		height: 30%;
+	}
+	/* 第三屏结束 */
 }
 
 
@@ -488,19 +599,19 @@ body{
 	/* 第一屏结束 */
 
 	/* 公共样式开始 */
-	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(3) .name .myname,.fullpage .section:nth-child(4) .name .myname{
-		font-size: 16px;
+	.fullpage .section:nth-child(2) .name .myname,.fullpage .section:nth-child(4) .name .myname,.fullpage .section:nth-child(5) .name .myname{
+		font-size: 20px;
 	}
-	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(3) .name .about,.fullpage .section:nth-child(4) .name .about{
+	.fullpage .section:nth-child(2) .name .about,.fullpage .section:nth-child(4) .name .about,.fullpage .section:nth-child(5) .name .about{
 		left: 20%;
 	}
-	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(3) .name .line,.fullpage .section:nth-child(4) .name .line{
+	.fullpage .section:nth-child(2) .name .line,.fullpage .section:nth-child(4) .name .line,.fullpage .section:nth-child(5) .name .line{
 		right: 20%;
 	}
 	/* 公共样式结束 */
 
 	/* 第二屏开始 */
-
+	
 	/* 第二屏结束 */
 }
 
